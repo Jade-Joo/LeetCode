@@ -1,22 +1,27 @@
 class Solution(object):
     def threeSum(self, nums: list) -> list:
-        nums.sort()
+        nums.sort() #ascending
         N, result = len(nums), []
+
+        #i = current index
         for i in range(N):
+            #remove duplicate
             if i > 0 and nums[i] == nums[i-1]:
                 continue
+            #num[i] = a = -(b + c) = target
             target = nums[i]*-1
-            s,e = i+1, N-1
-            while s<e:
-                if nums[s]+nums[e] == target:
-                    result.append([nums[i], nums[s], nums[e]])
-                    s = s+1
-                    while s<e and nums[s] == nums[s-1]:
-                        s = s+1
-                elif nums[s] + nums[e] < target:
-                    s = s+1
+
+            left, right = i+1, N-1
+            while left < right:
+                if nums[left]+nums[right] == target:
+                    result.append([nums[i], nums[left], nums[right]])
+                    left += 1
+                    while left < right and nums[left] == nums[left-1]:
+                        left += 1
+                elif nums[left] + nums[right] < target:
+                    left += 1
                 else:
-                    e = e-1
+                    right -= 1
         return result
 
 if __name__ == '__main__':

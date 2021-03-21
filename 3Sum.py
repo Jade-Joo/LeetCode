@@ -13,13 +13,16 @@ class Solution(object):
 
             left, right = i+1, N-1
             while left < right:
+                #find
                 if nums[left]+nums[right] == target:
                     result.append([nums[i], nums[left], nums[right]])
                     left += 1
                     while left < right and nums[left] == nums[left-1]:
                         left += 1
+                #bigger
                 elif nums[left] + nums[right] < target:
                     left += 1
+                #smaller
                 else:
                     right -= 1
         return result

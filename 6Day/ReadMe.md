@@ -1,6 +1,7 @@
 # Catalan Number
 
-위키백과 : 조합론에서, 카탈랑 수(Catalan數, 영어: Catalan number)는 이진 트리의 수 따위를 셀 때 등장하는 수열이다.
+위키백과 : 조합론에서, 카탈랑 수(Catalan數, 영어: Catalan number)는 이진 트리의 수 따위를 셀 때 등장하는 수열이다.   
+<img src="https://user-images.githubusercontent.com/61103343/112749932-760e9900-9000-11eb-8e35-3dcd0b27b062.png" width="100px" height="70px" title="1"></img>   
 
 ## 96. Unique Binary Search Trees
 * n = 2일때
